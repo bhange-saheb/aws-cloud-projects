@@ -1,4 +1,5 @@
 # AWS Cloud Governance & Auto-Remediation with EventBridge and Lambda
+![OverViewImage](Overview.png)
 
 A serverless AWS governance and auto-remediation project that uses **Amazon EventBridge, AWS Lambda, EventBridge Scheduler, IAM, Amazon SNS, Amazon EC2, EBS, and Elastic IPs** to automatically detect and remediate potentially unnecessary or risky cloud resources.
 
