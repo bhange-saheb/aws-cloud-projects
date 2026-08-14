@@ -1,0 +1,16 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowSchedulerToInvokeLambda",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:InvokeFunction"
+            ],
+            "Resource": [
+                "arn:aws:lambda:*:*:function:ebs-governance",
+                "arn:aws:lambda:*:*:function:eip-governance"
+            ]
+        }
+    ]
+}

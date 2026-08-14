@@ -1,0 +1,16 @@
+{
+    "source": [
+        "aws.ec2"
+    ],
+    "detail-type": [
+        "EBS Volume Notification"
+    ],
+    "detail": {
+        "event": [
+            "createVolume"
+        ],
+        "result": [
+            "available"
+        ]
+    }
+}

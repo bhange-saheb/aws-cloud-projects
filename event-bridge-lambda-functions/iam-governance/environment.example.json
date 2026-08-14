@@ -1,0 +1,4 @@
+{
+  "BOUNDARY_POLICY_ARN": "arn:aws:iam::ACCOUNT_ID:policy/IAMUser-EC2-S3-Boundary",
+  "SNS_TOPIC_ARN": "arn:aws:sns:REGION:ACCOUNT_ID:aws-governance-alerts"
+}

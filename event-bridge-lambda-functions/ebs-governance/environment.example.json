@@ -1,0 +1,7 @@
+{
+  "SCHEDULER_ROLE_ARN": "arn:aws:iam::ACCOUNT_ID:role/aws-governance-scheduler-role",
+  "SCHEDULER_TARGET_LAMBDA_ARN": "arn:aws:lambda:REGION:ACCOUNT_ID:function:ebs-governance",
+  "SNS_TOPIC_ARN": "arn:aws:sns:REGION:ACCOUNT_ID:aws-governance-alerts",
+  "CLEANUP_DELAY_MINUTES": "5",
+  "DRY_RUN": "true"
+}

@@ -1,0 +1,51 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudWatchLoggingPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        },
+        {
+            "Sid": "IAMGovernancePermissions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:PutUserPermissionsBoundary"
+            ],
+            "Resource": "arn:aws:iam::*:user/*"
+        },
+        {
+            "Sid": "EC2AndEBSGovernancePermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeVolumes",
+                "ec2:DeleteVolume",
+                "ec2:DescribeAddresses",
+                "ec2:ReleaseAddress"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SNSPublishPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "sns:Publish"
+            ],
+            "Resource": "arn:aws:sns:*:*:aws-governance-alerts"
+        },
+        {
+            "Sid": "EventBridgeSchedulerPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "scheduler:CreateSchedule",
+                "iam:PassRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
