@@ -36,16 +36,23 @@
             "Action": [
                 "sns:Publish"
             ],
-            "Resource": "arn:aws:sns:*:*:aws-governance-alerts"
+            "Resource": "arn:aws:sns:region:acountID:aws-governance-alerts"
         },
         {
-            "Sid": "EventBridgeSchedulerPermissions",
+            "Sid": "EventBridgeSchedulerCreateSchedule",
             "Effect": "Allow",
             "Action": [
-                "scheduler:CreateSchedule",
+                "scheduler:CreateSchedule"
+            ],
+            "Resource": "arn:aws:scheduler:region:acountID:schedule/*"
+        },
+        {
+            "Sid": "PassSchedulerRole",
+            "Effect": "Allow",
+            "Action": [
                 "iam:PassRole"
             ],
-            "Resource": "*"
+            "Resource": "arn:aws:iam::accoudtID:role/scheduler-role-policy."
         }
     ]
 }

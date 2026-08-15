@@ -31,9 +31,35 @@ def first_value(*values):
 
 
 def extract_volume_id(event):
+    # 1. Check resources first
+    resources = event.get("resources", [])
+
+    for resource in resources:
+        if isinstance(resource, str) and ":volume/" in resource:
+            return resource.split(":volume/", 1)[1]
+
+    # 2. Check detail
     detail = event.get("detail", {})
+
+    # Handle detail being a JSON string
+    if isinstance(detail, str):
+        try:
+            detail = json.loads(detail)
+        except json.JSONDecodeError:
+            return None
+
+    if not isinstance(detail, dict):
+        return None
+
     req = detail.get("requestParameters", {})
     resp = detail.get("responseElements", {})
+
+    if not isinstance(req, dict):
+        req = {}
+
+    if not isinstance(resp, dict):
+        resp = {}
+
     return first_value(
         detail.get("volumeId"),
         detail.get("resourceId"),
@@ -60,11 +86,13 @@ def schedule_recheck(volume_id, context):
         Target={
             "Arn": target_arn,
             "RoleArn": SCHEDULER_ROLE_ARN,
-            "Input": json.dumps({
-                "action": "recheck",
-                "resource_type": "ebs",
-                "volume_id": volume_id,
-            }),
+            "Input": json.dumps(
+                {
+                    "action": "recheck",
+                    "resource_type": "ebs",
+                    "volume_id": volume_id,
+                }
+            ),
         },
         ActionAfterCompletion="DELETE",
     )

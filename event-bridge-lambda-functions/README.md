@@ -600,7 +600,7 @@ This prevents accidental deletion of intentionally unused resources.
 
 ---
 
-# 🛡️ 8. Production Safety Controls
+# 8. Production Safety Controls
 
 Before enabling automatic deletion in a production environment, implement:
 
