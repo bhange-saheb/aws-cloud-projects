@@ -3,9 +3,16 @@ FROM nginx:alpine
 LABEL maintainer="Ankit Bhange"
 LABEL description="Ankit's Neon Snake Game"
 
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
-COPY script.js /usr/share/nginx/html/script.js
+RUN apk add --no-cache curl net-tools jq
+
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
+
+# Make the web files readable by nginx
+RUN chmod 644 /usr/share/nginx/html/index.html \
+    /usr/share/nginx/html/style.css \
+    /usr/share/nginx/html/script.js
 
 EXPOSE 80
 

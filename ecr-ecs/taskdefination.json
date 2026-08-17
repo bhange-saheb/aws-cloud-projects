@@ -1,0 +1,20 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "ankit-game",
+            "image": "680464296394.dkr.ecr.us-east-1.amazonaws.com/ankit/test:latest",
+            "memory": 256,
+            "cpu": 256,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ],
+    "networkMode": "bridge",
+    "placementConstraints": [],
+    "family": "ankit-game"
+}
