@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankit's Neon Snake</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <div>
+                <p class="eyebrow">NEON ARCADE</p>
+                <h1>🐍 ANKIT'S <span>NEON SNAKE</span></h1>
+                <p class="subtitle">How long can you survive?</p>
+            </div>
+
+            <div class="creator-badge">
+                <span>CREATED BY</span>
+                <strong>Ankit Bhange</strong>
+            </div>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>🏆 SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>🔥 HIGH SCORE</span>
+                <strong id="highScore">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⚡ SPEED</span>
+                <strong id="speed">1x</strong>
+            </div>
+
+        </section>
+
+        <section class="game-card">
+
+            <div class="game-status">
+                <span id="statusDot"></span>
+                <span id="statusText">READY</span>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+                <div id="startScreen" class="overlay">
+                    <div class="overlay-content">
+                        <div class="snake-icon">🐍</div>
+
+                        <h2>READY?</h2>
+
+                        <p>
+                            Eat the glowing food.<br>
+                            Don't hit the walls or yourself.
+                        </p>
+
+                        <button id="startButton" class="primary-button">
+                            START GAME
+                        </button>
+
+                        <small>
+                            Use Arrow Keys or WASD
+                        </small>
+                    </div>
+                </div>
+
+                <div id="gameOverScreen" class="overlay hidden">
+                    <div class="overlay-content">
+
+                        <div class="game-over-icon">💥</div>
+
+                        <h2>GAME OVER</h2>
+
+                        <p>Your Score</p>
+
+                        <div id="finalScore" class="final-score">
+                            0
+                        </div>
+
+                        <button id="restartButton" class="primary-button">
+                            PLAY AGAIN
+                        </button>
+
+                    </div>
+                </div>
+
+                <div id="pauseScreen" class="overlay hidden">
+                    <div class="overlay-content">
+
+                        <div class="pause-icon">⏸</div>
+
+                        <h2>PAUSED</h2>
+
+                        <button id="resumeButton" class="primary-button">
+                            RESUME
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+
+                <button id="pauseButton" class="control-button">
+                    ⏸ PAUSE
+                </button>
+
+                <button id="restartGameButton" class="control-button">
+                    ↻ RESTART
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="instructions">
+
+            <div>
+                <span class="instruction-icon">⌨️</span>
+                <div>
+                    <strong>Controls</strong>
+                    <p>Arrow Keys / WASD</p>
+                </div>
+            </div>
+
+            <div>
+                <span class="instruction-icon">🍎</span>
+                <div>
+                    <strong>Eat Food</strong>
+                    <p>+10 points</p>
+                </div>
+            </div>
+
+            <div>
+                <span class="instruction-icon">⚠️</span>
+                <div>
+                    <strong>Watch Out</strong>
+                    <p>Don't hit yourself</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>🐍 Ankit's Neon Snake</p>
+            <span>Built with HTML • CSS • JavaScript</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
