@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "ankit-game",
-            "image": "680464296394.dkr.ecr.us-east-1.amazonaws.com/ankit/test:latest",
+            "image": "680464296394.dkr.ecr.us-east-1.amazonaws.com/ankit-game:latest",
             "memory": 256,
             "cpu": 256,
             "essential": true,
