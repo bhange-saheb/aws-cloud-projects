@@ -1,7 +1,7 @@
 # AWS ECR & ECS — Containerized Web Application Deployment
 ![architecure](architecture.png)
 
-![game-ui](image.png)
+![game-ui](game-ui.png)
 
 ## Project Overview
 
