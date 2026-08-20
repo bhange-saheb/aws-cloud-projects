@@ -492,6 +492,7 @@ Infrastructure as Code
 
 AWS Managed Microsoft AD + IAM Identity Center demonstrates an end-to-end enterprise identity workflow:
 
+```
 AWS Managed Microsoft AD
           ↓
      DNS Configuration
@@ -509,7 +510,7 @@ AWS Managed Microsoft AD
    Permission Sets
           ↓
     AWS Account Access
-
+```
 
 Outcome: A centralized identity and access management architecture that connects Microsoft Active Directory identities with controlled AWS resource access through IAM Identity Center.
 
