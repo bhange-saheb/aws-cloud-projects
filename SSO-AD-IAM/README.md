@@ -38,6 +38,7 @@ Assign AWS account access to directory users.
 Validate role-based access to AWS resources.
 Apply security and least-privilege principles.
 🏗️ Architecture
+```
                          AWS Cloud
                               │
                               │
@@ -83,6 +84,7 @@ Apply security and least-privilege principles.
                     │ AWS Resources      │
                     └────────────────────┘
 
+```
 ### 🛠️ AWS Services & Technologies
 Service / Technology	Purpose
 AWS Managed Microsoft AD	Managed Active Directory service
@@ -216,6 +218,7 @@ AWS IAM Identity Center was configured to use the AWS Managed Microsoft AD direc
 This allows Active Directory identities to be used for centralized AWS access management.
 
 Identity flow
+```
 Active Directory
        │
        ▼
@@ -229,7 +232,7 @@ Permission Set
        │
        ▼
 AWS Resources
-
+```
 
 This provides a centralized authentication and authorization model rather than managing individual IAM users for workforce access.
 
@@ -286,7 +289,7 @@ AWS Account
 The user's access was validated against the permissions defined by the assigned permission set.
 
 This confirmed the complete identity flow:
-
+```
 AD User
    ↓
 IAM Identity Center
@@ -296,7 +299,7 @@ Permission Set
 AWS Account
    ↓
 AWS Resources
-
+```
 🔐 Security Considerations
 
 Security was considered throughout the implementation.
@@ -375,6 +378,7 @@ Enterprise identity architecture
 Screenshots can be added to demonstrate the implementation.
 
 Recommended screenshots:
+```
 
 screenshots/
 │
@@ -387,7 +391,7 @@ screenshots/
 ├── 07-iam-identity-center.png
 ├── 08-permission-sets.png
 └── 09-user-assignment.png
-
+```
 
 Example:
 
@@ -397,6 +401,7 @@ Example:
 Important: Before uploading screenshots, hide account IDs, public IP addresses, usernames, domain credentials, email addresses, and other sensitive information.
 
 📁 Repository Structure
+```
 aws-managed-ad-iam-identity-center/
 │
 ├── README.md
@@ -414,6 +419,7 @@ aws-managed-ad-iam-identity-center/
 │
 └── docs/
     └── architecture.png
+```
 
 💡 Real-World Use Case
 
